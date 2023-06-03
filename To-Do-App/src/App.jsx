@@ -1,8 +1,11 @@
 import './App.css'
+import ToDoWrapper from './components/ToDoWrapper';
 
 function App() {
   return (
-    <h1>Hello World</h1>
+    <div className='App'>
+      <ToDoWrapper />
+    </div>
   );
 }
 
