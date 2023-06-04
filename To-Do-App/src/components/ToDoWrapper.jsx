@@ -29,9 +29,9 @@ const ToDoWrapper = () => {
     }
   return (
     <div className='TodoWrapper'>
-    <h1>Get Things Done!</h1>
+    <h1>To Do App</h1>
         <ToDoForm addTodo={addTodo} />
-
+        <h2>To Do Lists:</h2>
         {todos.map((todo) => (
           todo.isEditing ? (
             <EditToDoForm editTodo={editTask} task={todo} />
