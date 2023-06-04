@@ -1,13 +1,18 @@
-import React from 'react';
-// import { AiFillDelete } from 'react-icons/fa';
+// import React from 'react';
 
-const ToDo = () => {
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPenToSquare } from '@fortawesome/free-solid-svg-icons';
+import { faTrash } from '@fortawesome/free-solid-svg-icons';
+
+const ToDo = ({task, toggleComplete, deleteTodo, editTodo}) => {
   return (
     <div className='Todo'>
-        <p>Go to school</p>
-        {/* <div>
-        <AiFillDelete />
-        </div> */}
+      <p onClick={()=>toggleComplete()} className={`${task.completed ? 'completed': ""}`}>{task.task}</p>
+      <div>
+        <FontAwesomeIcon icon={faPenToSquare} onClick={()=> editTodo(task.id)} />
+        <FontAwesomeIcon icon={faTrash} onClick={()=> deleteTodo(task.id)}/>
+
+      </div>
     </div>
   )
 }
