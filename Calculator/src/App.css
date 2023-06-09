@@ -1,6 +1,7 @@
 .calc {
     width: 320px;
     margin: 100px auto;
+    background-color: black;
 }
 
 #answer {
@@ -20,9 +21,14 @@
     color: white;
     font-size: 30px;
     border: 1px solid black;
+    border-radius: 5px;
 }
 
-.button1 {
-    display: inline-block;
-    height: 160px;
+.long {
+    width: 160px;
+}
+
+.highlight {
+    background-color: #565656;
+
 }
