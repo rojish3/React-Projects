@@ -14,6 +14,9 @@ const App = () => {
           <div className='location'>
             <p>Kathmandu</p>
           </div>
+          <div className='time'>
+            <p>20:30</p>
+          </div>
           <div className='temp'>
             <h1>60F</h1>
           </div>
