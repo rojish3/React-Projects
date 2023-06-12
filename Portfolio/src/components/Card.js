@@ -14,7 +14,7 @@ const Card = ({ title, description, imageSrc }) => {
         <Image src={imageSrc} borderRadius='xl' />
 
         <VStack spacing={4} p={4} alignItems='flex-start'>
-          <HStack justifyContent='space-between' alignItem='center'>
+          <HStack justifyContent='space-between' alignItems='center'>
             <Heading as='h3' size='md' color='black'>{title}</Heading>
           </HStack>
             <Text color='grey' fontSize='lg'>{description}</Text>

@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import {
@@ -44,8 +44,55 @@ const Header = () => {
     }
   };
 
+
+  const headerRef = useRef(null); 
+  useEffect(() => { 
+    let prevScrollPos = window.scrollY; 
+  
+    const handleScroll = () => { 
+      const currentScrollPos = window.scrollY; 
+      const headerElement = headerRef.current; 
+      if (!headerElement) { 
+        return; 
+      } 
+      if (prevScrollPos > currentScrollPos) { 
+        headerElement.style.transform = "translateY(0)"; 
+      } else { 
+        headerElement.style.transform = "translateY(-200px)"; 
+      } 
+      prevScrollPos = currentScrollPos; 
+    } 
+    window.addEventListener('scroll', handleScroll) 
+  
+    return () => { 
+      window.removeEventListener('scroll', handleScroll) 
+    } 
+  }, []); 
+
+  const [scrollPosition, setScrollPosition] = useState(0);
+  const [showHeader, setShowHeader] = useState(true);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentPosition = window.scrollY;
+
+      setShowHeader(currentPosition <= 0 || currentPosition < scrollPosition);
+
+      setScrollPosition(currentPosition);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [scrollPosition]);
+
+
+  
+
   return (
-    <Box
+    <Box style={{ display: showHeader ? 'block' : 'none' }}
       position="fixed"
       top={0}
       left={0}
@@ -78,16 +125,16 @@ const Header = () => {
             <HStack spacing={8}>
               {/* Add links to Projects and Contact me section */}
               <a 
-                href="#projects-section" 
+                href="#projects" 
                 // id="projects-section"
                 onClick={handleClick("projects")}
               >
                 Projects
               </a>
               <a 
-                href="#contactme-section" 
+                href="#contactme" 
                 // id="contactme-section"
-                onClick={handleClick}
+                onClick={handleClick("contactme")}
               >
                 Contact Me
               </a>
