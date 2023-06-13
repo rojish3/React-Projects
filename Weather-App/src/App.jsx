@@ -6,7 +6,7 @@ const App = () => {
 
   const url = `https://api.openweathermap.org/data/2.5/weather?q=kathmandu&appid={1584ff14e6e551b7bfef1023af262dc0}`;
 
-
+  then.get(url.url);
   return (
     <div className='App'>
       <div className='container'>
