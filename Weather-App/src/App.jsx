@@ -1,18 +1,37 @@
-import React, {useState} from 'react';
+import {useState} from 'react';
 import './App.css';
 import axios from 'axios';
 
 const App = () => {
+  const [data, setData] = useState({})
+  const [location, setLocation] = useState('');
 
-  const url = `https://api.openweathermap.org/data/2.5/weather?q=kathmandu&appid={1584ff14e6e551b7bfef1023af262dc0}`;
+  const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=1584ff14e6e551b7bfef1023af262dc0`;
+  const searchLocation = (event) => {
+    if(event.key === 'Enter'){
+      axios.get(url).then((response) => {
+        setData(response.data)
+        console.log(response.data)
+      });
+      setLocation('');
 
-  then.get(url.url);
+    }
+  }
+
   return (
     <div className='App'>
+    <div className='search'>
+      <input 
+      type='text'
+      value={location}
+      onChange={event => setLocation(event.target.value)}
+      onKeyDown={searchLocation}
+      />
+    </div>
       <div className='container'>
         <div className='top'>
           <div className='location'>
-            <p>Kathmandu</p>
+            <p>{data.name}</p>
           </div>
           <div className='time'>
             <p>20:30</p>
