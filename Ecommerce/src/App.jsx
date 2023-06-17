@@ -1,11 +1,12 @@
 
 import './App.css'
+import Login from './components/authentication/login'
 
 function App() {
 
   return (
     <>
-      <h1>Ecommerce Website</h1>
+      <Login />
     </>
   )
 }
