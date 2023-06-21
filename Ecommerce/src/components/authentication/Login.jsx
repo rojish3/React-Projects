@@ -2,6 +2,7 @@ import React from 'react';
 import '../../App.css';
 import { Button, FormControlLabel, Grid, Link, Paper, TextField, Typography } from '@mui/material';
 import { CheckBox } from '@mui/icons-material';
+import Signup from './Signup';
 
 
 const Login = () => {
@@ -22,8 +23,8 @@ const Login = () => {
                     <Grid align='center' marginBottom='30px'>
                         <h1>Login</h1>
                     </Grid>
-                    <TextField label='username' placeholder='Enter username' variant='standard' style={spaceBetween} fullWidth required />
-                    <TextField label='password' placeholder='Enter password' type='password' style={spaceBetween} variant='standard' fullWidth required />
+                    <TextField label='Email' placeholder='Enter Email' variant='standard' style={spaceBetween} fullWidth required />
+                    <TextField label='Password' placeholder='Enter Password' type='password' style={spaceBetween} variant='standard' fullWidth required />
 
                     <FormControlLabel style={spaceBetween}
                         control={
@@ -44,8 +45,8 @@ const Login = () => {
                     </Typography>
                     <Typography style={spaceBetween}>
                         Do you have an account?
-                        <Link href="#">
-                            Sign up
+                        <Link to={Signup}>
+                            Signup
                         </Link>
                     </Typography>
 
