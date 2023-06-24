@@ -2,6 +2,8 @@ import styled from "styled-components";
 
 const Contact = () => {
   const Wrapper = styled.section`
+    ${'' /* background-color: ${({theme}) => theme.colors.bg}; */}
+    height: 100vh;
     padding: 9rem 0 5rem 0;
     text-align: center;
 
@@ -33,7 +35,11 @@ const Contact = () => {
     }
   `;
 
-  return <Wrapper></Wrapper>;
+  return (
+    <Wrapper>
+      <div>Contact</div>
+    </Wrapper>
+  );
 };
 
 export default Contact;

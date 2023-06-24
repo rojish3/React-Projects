@@ -1,10 +1,11 @@
 import styled from "styled-components";
 
 const Cart = () => {
-  return <Wrapper></Wrapper>;
+  return <Wrapper>Cart</Wrapper>;
 };
 
 const Wrapper = styled.section`
+  height: 100vh;
   padding: 9rem 0;
 
   .grid-four-column {
