@@ -5,12 +5,13 @@ import styled from 'styled-components';
 const PageNavigation = ({title}) => {
   return (
     <Wrapper>
-        <NavLink to="/">Home</NavLink>/{title}
+        <NavLink to="/"> Home</NavLink>/{title}
     </Wrapper>
   )
 }
 
 const Wrapper = styled.section`
+    padding: 2rem;
     height: 10rem;
     background-color: ${({theme}) => theme.colors.bg};
     display: flex;
