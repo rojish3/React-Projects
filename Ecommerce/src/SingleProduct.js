@@ -105,6 +105,9 @@ const SingleProduct = () => {
 }
 
 const Wrapper = styled.section`
+  h2 {
+    text-transform: uppercase;
+  }
   .container {
     padding: 9rem 2rem;
   }

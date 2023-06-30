@@ -82,7 +82,6 @@ const Wrapper = styled.section`
     color: #fff;
   }
 
-  /* we can use it as a global one too  */
   .amount-toggle {
     margin-top: 3rem;
     margin-bottom: 1rem;
