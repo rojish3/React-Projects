@@ -1,4 +1,5 @@
 import ecommerce from "../assets/ecommerce.png";
+import chatapp from "../assets/chatapp.png"
 const Projects = () => {
   return (
     <div className="projects m-10 p-10">
@@ -10,19 +11,17 @@ const Projects = () => {
             Gadget Store (E-commerce App)
           </h3>
           <p>
-            Gadget Store is an one stop destination for your electornic gadget
-            needs.
+            E commerce website to buy gadgets online, built using React.js
           </p>
         </div>
 
         <div className="card h-72 w-96 p-3 bg-gray-300 shadow-xl overflow-hidden">
-          <img src={ecommerce} alt="ecommerce"></img>
+          <img src={chatapp} alt="chat app"></img>
           <h3 className="text-lg text-center my-2 font-bold">
-            Gadget Store (E-commerce App)
+            Team Collab (MERN Chat App)
           </h3>
           <p>
-            Gadget Store is an one stop destination for your electornic gadget
-            needs.
+            Real time chat application built using MERN Stack.
           </p>
         </div>
       </div>
