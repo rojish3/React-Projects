@@ -10,6 +10,11 @@ const Header = () => {
                 <div className='item'>Skills</div>
                 <div className='item'>Projects</div>
                 <div className='item'>Contact</div>
+                <div className='profile'>
+                    <button className='buttons__toggle'>
+                        <i className='fa fa-user'></i>
+                    </button>
+                </div>
             </div>
 
             <div className="hamburger inline-block p-4 cursor-pointer md:hidden">
