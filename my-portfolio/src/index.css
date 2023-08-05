@@ -1,3 +1,20 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.gradient,
+.active {
+    background: black
+}
+
+.active {
+    color: #fff;
+    padding: 1rem;
+    border-radius: 100%;
+}
+
+@layer utilities {
+    .section {
+        @apply py-8 lg:py-24 lg:h-screen flex items-center;
+    }
+}
