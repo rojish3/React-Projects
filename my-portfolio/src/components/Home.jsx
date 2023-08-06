@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import { Link } from 'react-scroll'
 import Image from '../assets/img.jpg'
 import { FaGithub, FaLinkedin } from 'react-icons/fa'
 import { TypeAnimation } from 'react-type-animation'
@@ -48,16 +49,23 @@ const Home = () => {
                         >
                             Hi I am a Front End Web Developer based in
                             Kathmandu, Nepal. I am currently learning front end
-                            web development technologies
+                            web development technologies.
                         </motion.p>
                         <motion.div
                             variants={fadeIn('up', 0.6)}
                             initial="hidden"
                             whileInView={'show'}
                             viewport={{ once: false, amount: 0.7 }}
-                            className="flex max-w-max gap-x-6 items-center mb-12 mx-auto lg:mx-0"
+                            className="flex max-w-max gap-x-6 items-center mb-8 mx-auto lg:mx-0"
                         >
-                            <button className="btn btn-lg">Contact me</button>
+                            <Link
+                                to="contact"
+                                activeClass="active"
+                                smooth={true}
+                                spy={true}
+                            >
+                                <button className="btn btn-lg">Contact me</button>
+                            </Link>
                             <a href="#">My Portfolio</a>
                         </motion.div>
                         <motion.div
@@ -67,10 +75,18 @@ const Home = () => {
                             viewport={{ once: false, amount: 0.7 }}
                             className="cursor-pointer flex text-[20px] gap-x-6 max-w-max mx-auto lg:mx-0 lg:cursor-pointer"
                         >
-                            <a href="https://github.com/rojish3" rel="noreferrer" target="_blank">
+                            <a
+                                href="https://github.com/rojish3"
+                                rel="noreferrer"
+                                target="_blank"
+                            >
                                 <FaGithub />
                             </a>
-                            <a href="https://www.linkedin.com/in/rojish-ranjit/" rel="noreferrer" target="_blank">
+                            <a
+                                href="https://www.linkedin.com/in/rojish-ranjit/"
+                                rel="noreferrer"
+                                target="_blank"
+                            >
                                 <FaLinkedin />
                             </a>
                         </motion.div>
@@ -82,7 +98,11 @@ const Home = () => {
                         whileInView={'show'}
                         className="flex items-center mx-auto lg:flex flex-1 max-w-[250px] lg:max-w-[420px]"
                     >
-                        <img className='rounded-full border-2' src={Image} alt="profile picture" />
+                        <img
+                            className="rounded-full border-2"
+                            src={Image}
+                            alt="profile picture"
+                        />
                     </motion.div>
                 </div>
             </div>
