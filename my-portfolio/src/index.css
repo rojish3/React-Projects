@@ -2,9 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
+.btn {
+    background: black;
+    border: 1px solid white;
+    box-shadow: 1px 2px 4px white;
+}
+
+.btn:hover {
+    --tw-bg-opacity: 1;
+    background-color: rgb(31 41 55 / var(--tw-bg-opacity));
+}
+
 .gradient,
 .active {
-    background: black
+    background: black;
 }
 
 .active {
@@ -15,6 +26,18 @@
 
 @layer utilities {
     .section {
-        @apply py-8 lg:py-24 lg:h-screen flex items-center;
+        @apply py-4 lg:py-16 flex items-center;
+    }
+    .btn {
+        @apply rounded-full text-white font-medium;
+    }
+    .btn-sm {
+        @apply h-[48px] px-6 text-sm;
+    }
+    .btn-lg {
+        @apply h-[56px] px-10 text-base;
+    }
+    .btn-link {
+        @apply text-base;
     }
 }

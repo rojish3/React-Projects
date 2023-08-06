@@ -1,29 +1,17 @@
 import logo from '../assets/logo.png'
 const Header = () => {
     return (
-        <>
-            <div className="header flex justify-between items-center p-4 bg-gray-400">
-                <div className="logo flex h-10 m-3">
-                    <img src={logo} alt="logo" />
-                </div>
-                <div className="nav hidden md:flex space-x-8 p-3 text-xl cursor-pointer">
-                    <div className="item">Skills</div>
-                    <div className="item">Projects</div>
-                    <div className="item">Contact</div>
-                    <div className="profile">
-                        <button className="buttons__toggle">
-                            <i className="fa fa-user"></i>
-                        </button>
-                    </div>
+        <div className='bg-gray-800 py-8 px-4'>
+            <div className='container mx-auto'>
+                <div className='flex justify-between items-center'>
+                    <a href='#'>
+                        <img src={logo} alt='logo'></img>
+                    </a>
+                    <button className='btn btn-sm'>Work with me</button>
                 </div>
 
-                <div className="hamburger inline-block p-4 cursor-pointer md:hidden">
-                    <div className="line h-0.5 w-6 my-1 bg-black"></div>
-                    <div className="line h-0.5 w-6 my-1 bg-black"></div>
-                    <div className="line h-0.5 w-6 my-1 bg-black"></div>
-                </div>
             </div>
-        </>
+        </div>
     )
 }
 
