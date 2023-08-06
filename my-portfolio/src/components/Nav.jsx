@@ -1,5 +1,5 @@
-import { Link } from 'react-scroll'
 import React from 'react'
+import { Link } from 'react-scroll'
 import { BiHomeAlt, BiUser } from 'react-icons/bi'
 import { BsBriefcase, BsChatSquareText } from 'react-icons/bs'
 const Nav = () => {

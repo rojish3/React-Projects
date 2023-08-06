@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import { Link } from 'react-scroll'
 import Image from '../assets/img.jpg'
 import { FaGithub, FaLinkedin } from 'react-icons/fa'
@@ -64,9 +64,19 @@ const Home = () => {
                                 smooth={true}
                                 spy={true}
                             >
-                                <button className="btn btn-lg">Contact me</button>
+                                <button className="btn btn-lg">
+                                    Contact me
+                                </button>
                             </Link>
-                            <a href="#">My Portfolio</a>
+                            <Link
+                                to="projects"
+                                activeClass="active"
+                                smooth={true}
+                                spy={true}
+                                className="cursor-pointer"
+                            >
+                                My Portfolio
+                            </Link>
                         </motion.div>
                         <motion.div
                             variants={fadeIn('up', 0.7)}
