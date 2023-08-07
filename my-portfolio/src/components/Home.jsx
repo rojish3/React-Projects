@@ -83,12 +83,13 @@ const Home = () => {
                             initial="hidden"
                             whileInView={'show'}
                             viewport={{ once: false, amount: 0.7 }}
-                            className="cursor-pointer flex text-[20px] gap-x-6 max-w-max mx-auto lg:mx-0 lg:cursor-pointer"
+                            className="cursor-pointer flex text-[32px] gap-x-6 max-w-max mx-auto lg:mx-0 lg:cursor-pointer"
                         >
                             <a
                                 href="https://github.com/rojish3"
                                 rel="noreferrer"
                                 target="_blank"
+                                className='text-white hover:text-[#6cc644]'
                             >
                                 <FaGithub />
                             </a>
@@ -96,6 +97,7 @@ const Home = () => {
                                 href="https://www.linkedin.com/in/rojish-ranjit/"
                                 rel="noreferrer"
                                 target="_blank"
+                                className='text-white hover:text-[#0A66C2]'
                             >
                                 <FaLinkedin />
                             </a>
