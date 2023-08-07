@@ -26,7 +26,7 @@
 
 @layer utilities {
     .section {
-        @apply py-4 lg:py-16 flex items-center;
+        @apply py-4 lg:py-16 lg:h-full flex items-center;
     }
     .btn {
         @apply rounded-full text-white font-medium;
