@@ -5,7 +5,7 @@ import { CiShare1 } from 'react-icons/ci';
 const ProjectCard = (props) => {
     const { title, description, language1, language2, language3, language4, gitlink, img } = props;
   return (
-    <div className='card flex justify-center items-center mx-auto bg-gray-800 h-80 w-[70%] p-8 rounded-3xl'>
+    <div className='card flex justify-center items-center mx-auto bg-gray-800 h-80 w-[70%] p-4 rounded-3xl'>
         <div className='content w-1/2 flex flex-col text-center px-8 gap-y-2'>
             <h2 className='uppercase text-xl'>{title}</h2>
             <p className='text-slate-400'>{description}</p>
@@ -22,7 +22,7 @@ const ProjectCard = (props) => {
                 
         </div>
         <div className='img w-1/2 '>
-            <img className='rounded-xl' src={img} alt='ecommerce' />
+            <img className='rounded-xl' src={img} alt={title} />
         </div>
     </div>
   )
