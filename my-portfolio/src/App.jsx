@@ -4,6 +4,7 @@ import About from './components/About'
 import Contact from './components/Contact'
 import Home from './components/Home'
 import Projects from './components/Projects'
+import Footer from './components/Footer';
 
 const App = () => {
     return (
@@ -14,6 +15,7 @@ const App = () => {
             <About />
             <Projects />
             <Contact />
+            <Footer />
             <div className="h-[1000px]"></div>
         </div>
     )
