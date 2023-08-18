@@ -1,6 +1,6 @@
+import { footerData } from '../Data/footerData';
 import AppstoreImg from '../assets/app-store.png';
 import PlaystoreImg from '../assets/play-store.png';
-import { IoLanguage } from 'react-icons/io5';
 
 const AppInfo = () => {
   return (
@@ -13,21 +13,13 @@ const AppInfo = () => {
           </div>
         </div>
         <div className='grid gap-y-4 lg:grid lg:grid-cols-2'>
-            <ul className='leading-8 lg:leading-[3rem]'>
-                <li>Get Help</li>
-                <li>Buy gift cards</li>
-                <li>Add your restaurant</li>
-                <li>Sign up to deliver</li>
-                <li>Create a business account</li>
-                <li>Promotions</li>
-            </ul>
-            <ul className='leading-8 lg:leading-[3rem]'>
-                <li>Restaurants near me</li>
-                <li>View all cities</li>
-                <li>Pickup near me</li>
-                <li>About Uber Eate</li>
-                <li className='flex items-center'><IoLanguage />&nbsp;English</li>
-            </ul>
+          {
+            footerData.map((item, idx) => (
+              <ul key={idx} className='leading-8 lg:leading-[3rem]'>
+                <li>{item}</li>
+              </ul>
+            ))
+          }
         </div>
     </div>
   )

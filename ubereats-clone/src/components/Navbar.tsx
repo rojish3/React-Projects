@@ -23,10 +23,7 @@ const Navbar = () => {
 
   return (
     <>
-        {/* <div className={`overlay absolute w-screen h-screen z-10 ${sidebar ? 'bg-[rgba(255, 99, 71, 0.2)]' : ' '}`}></div> */}
-        {/* onClick={() => setSidebar(!sidebar)}  */}
-
-        <nav className={`w-full flex justify-between items-center h-16 px-4 py-8 lg:px-10 lg:h-24 fixed top-0 z-20 ${changeBg} ${shadow}`}>
+        <nav className={`w-full flex justify-between items-center h-16 px-4 py-8 lg:px-10 lg:h-24 fixed top-0 z-20 transition-all duration-300 ease-in-out ${changeBg} ${shadow}`}>
             <div className='left-container items-center flex gap-4 text-xl lg:gap-6'>
                 <AiOutlineMenu className="text-2xl cursor-pointer" onClick={() => setSidebar(true)} />
                 <h2 className='text-2xl lg:text-3xl cursor-pointer'>Uber <b>Eats</b></h2>
@@ -34,50 +31,35 @@ const Navbar = () => {
             <div className='right-container flex gap-4 lg:gap-6'>
                 <div 
                   className='login' 
-                  value='Log in'
-                  onClick={(e) => {
-                    setLabel(e.target.value) 
+                  onClick={() => {
+                    setLabel("Log in") 
                     setShowModal(true)
                   }} >
                 <Button 
                   bg='bg-white'
                   color='text-black'
                   rounded='rounded-full'
-                  label="Log in"
+                  value="Log in"
                   />
                 </div>
 
                 <div 
                   className='signup'
-                  value='Sign Up'
-                  onClick={(e) => {
-                    setLabel(e.target.value) 
+                  onClick={() => {
+                    setLabel("Sign Up")
                     setShowModal(true)
                   }}>
                 <Button 
                   bg='bg-black'
                   color='text-white'
                   rounded='rounded-full'
-                  label="Sign Up"
+                  value="Sign Up"
                 />
                 </div>
 
             </div>
         </nav>
         <Modal showModal={showModal} label={label} setShowModal={setShowModal} />
-        {/* {
-          showModal ? (
-            <div className='absolute top-[50%] translate-y-[-50%] left-[50%] translate-x-[-50%] z-20 h-40 w-80 bg-white flex flex-col p-4 shadow rounded-lg'>
-              <div className='flex justify-end cursor-pointer'>
-              <GrClose onClick={() =>setShowModal(false)} />
-              </div>
-              <div className='flex h-full justify-center items-center'>
-                {label} Clicked
-              </div>
-            </div>
-          ) : null
-        } */}
-
 
         <div className={`sidebar fixed bg-white top-0 left-0 w-72 h-full z-50 p-6 flex flex-col gap-4 justify-between ${sidebar ? 'block' : 'hidden'}`}>
           <GrClose className='absolute right-1 top-1' onClick={() => setSidebar(false)}/>
@@ -86,13 +68,13 @@ const Navbar = () => {
               bg='bg-black'
               color='text-white'
               rounded='rounded-md'
-              label="Sign Up"
+              value="Sign Up"
               />
             <Button 
               bg='bg-gray-200'
               color='text-black'
               rounded='rounded-md'
-              label="Log in" 
+              value="Log in" 
               />
             <a>Create a business account</a>
             <a>Add your restaurant</a>
@@ -109,13 +91,13 @@ const Navbar = () => {
             bg='bg-gray-200'
             color='text-black'
             rounded='rounded-full'
-            label='iPhone'
+            value='iPhone'
             />
           <Button 
             bg='bg-gray-200'
             color='text-black'
             rounded='rounded-full'
-            label='Android'
+            value='Android'
             />
           </div>
           </div>

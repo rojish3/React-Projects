@@ -1,4 +1,6 @@
-const FeedsCard = ({image, value, label, link}) => {
+import { IcardData } from "../Data/cardsData"
+
+const FeedsCard: React.FC<IcardData> = ({image, value, label, link}) => {
   return (
     <div className="flex flex-col">
         <img src={image} alt={value} />

@@ -2,6 +2,13 @@ import img1 from '../assets/img1.webp';
 import img2 from '../assets/img2.webp';
 import img3 from '../assets/img3.webp';
 
+export interface IcardData {
+    image: string;
+    value: string;
+    label: string;
+    link: string;
+}
+
 export const cardData = [
     {
         image: img1,
