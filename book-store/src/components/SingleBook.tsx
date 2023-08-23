@@ -1,4 +1,5 @@
 import Fade from 'react-reveal/Fade';
+import { useNavigate } from 'react-router-dom';
 interface IBook {
   id?: number;
   title: string;
@@ -12,6 +13,7 @@ export const SingleBook: React.FC<IBook> = ({
   description,
   coverImage,
 }) => {
+  const navigate = useNavigate();
   return (
     <>
       <div className="flex flex-col justify-center items-center h-full gap-10 mt-4 p-4 lg:flex-row">
@@ -29,6 +31,7 @@ export const SingleBook: React.FC<IBook> = ({
           <h1 className="text-3xl font-bold">{title}</h1>
           <p className="mt-2 italic font-light text-sm">{author}</p>
           <p className="mt-4 text-lg">{description}</p>
+          <button onClick={() => navigate('/books')} className='bg-green-200 px-4 py-2 rounded-lg'>Go Back</button>
         </div>
         </Fade>
       </div>

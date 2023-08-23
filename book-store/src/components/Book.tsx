@@ -4,19 +4,8 @@ import { SingleBook } from "./SingleBook";
 
 const Book = () => {
   const { id } = useParams();
-
-    const book = booksData.filter((book) => book.id == Number(id))
-    // const { title, author } = book;
-
-  return (
-    <>
-      {
-        book.map((item) => (
-          <SingleBook key={item.id} {...item} />
-        ))
-      }
-    </>
-  );
+  const book = booksData.find((book) => book.id == Number(id));
+  return <>{book !== undefined && <SingleBook key={book.id} {...book} />}</>;
 };
 
 export default Book;

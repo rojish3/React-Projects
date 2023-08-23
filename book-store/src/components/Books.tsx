@@ -3,11 +3,11 @@ import { NavLink } from 'react-router-dom';
 import Zoom from 'react-reveal/Zoom';
 const Books = () => {
   return (
-    <div className="bg-gray-200 grid content-center md:grid-cols-2 lg:grid-cols-3">
-    {booksData.map((book) => (
-            <Zoom>
+    <div className="bg-white grid content-center md:grid-cols-2 lg:grid-cols-3">
+    <Zoom>
+      {booksData.map((book) => (
               <NavLink key={book.id} to={`/books/${book.id}`}>
-                <div className="rounded-lg bg-white p-2 m-auto my-4 card-shadow w-80 cursor-pointer hover:scale-105 hover:transition-all hover:duration-300 hover:ease-in-out">
+                <div className="rounded-lg bg-white p-2 m-auto h-[600px] my-4 card-shadow w-80 cursor-pointer hover:scale-105 hover:transition-all hover:duration-300 hover:ease-in-out">
                   <div className="w-full h-96 mx-auto">
                     <img className="rounded-lg w-full h-full"
                       src={book.coverImage}
@@ -29,9 +29,9 @@ const Books = () => {
                   </div>
                 </div>
               </NavLink>
-            </Zoom>
-            ))}
-    </div>
+          ))}
+          </Zoom>
+  </div>
   )
 }
 

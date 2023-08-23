@@ -11,5 +11,11 @@
 }
 
 .active {
-    color: red;
+    color: rgba(29 78 216 1);
+    text-decoration: underline;
+    transform: translate();
+}
+
+.hover {
+    color: rgba(29 78 216 1);
 }
