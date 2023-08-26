@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.image-shadow {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.card-shadow {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+/* .active {
+    color: rgba(29 78 216 1);
+    text-decoration: underline;
+    transform: translate();
+} */
+
+.hover {
+    color: rgba(29 78 216 1);
+}
+
+.background {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Adjust as needed */
+    background-image: url('https://images.saymedia-content.com/.image/ar_4:3%2Cc_fill%2Ccs_srgb%2Cq_auto:eco%2Cw_1200/MTk3NzM1NzIwMTY3Njc5Nzk0/calculate-the-capacity-of-a-bookshelf-or-bookcase.png');
+    background-size: cover;
+    background-position: center;
+}
+
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust the color and opacity */
+}
