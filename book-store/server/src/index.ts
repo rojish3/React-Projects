@@ -11,7 +11,7 @@ import { env } from './config/index';
 
 import {IUser} from './types/users.types';
 
-const uri = "place mongo uri here";
+const uri = "insert mongo uri here";
 const client = new MongoClient(uri);
 const database = client.db('web-fellowship');
 const usersCollection = database.collection('users');
