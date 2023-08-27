@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 const Navbar = () => {
   const navigate = useNavigate();
   return (
-    <div className="flex bg-gray-300 shadow-lg justify-between p-4 text-xl font-bold">
+    <div className="flex bg-gray-300 shadow-lg justify-between items-center p-4 text-xl font-bold">
             <h1 className='cursor-pointer' onClick={() => navigate('/')}>Books.com</h1>
             <ul className="flex gap-8 items-center">
                 <NavLink 
