@@ -31,7 +31,7 @@ export const SingleBook: React.FC<IBook> = ({
           <h1 className="text-3xl font-bold">{title}</h1>
           <p className="mt-2 italic font-light text-sm">{author}</p>
           <p className="mt-4 text-lg">{description}</p>
-          <button onClick={() => navigate('/books')} className='bg-green-200 px-4 py-2 rounded-lg'>Go Back</button>
+          <button onClick={() => navigate('/books')} className='mt-4 bg-blue-700 text-white px-4 py-2 rounded-lg'>Go Back</button>
         </div>
         </Fade>
       </div>
